@@ -1,0 +1,13 @@
+.button {
+    margin-right: 20px;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    background-color: beige;
+    cursor: pointer;
+}
+.button:hover,
+.button:focus {
+    background-color: bisque;
+}
