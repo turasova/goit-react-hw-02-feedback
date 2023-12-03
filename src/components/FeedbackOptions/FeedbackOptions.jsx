@@ -1,9 +1,14 @@
-import css from './FeedbackOptions.module.css'
-export const FeedbackOptions = ({good,neutral,bad}) => {
+import css from './FeedbackOptions.module.css';
+
+export const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return (
         <>
-                <button className={css.button } onClick={good}>Good</button>
-                <button className={css.button } onClick={neutral}>Neutral</button>
-                <button className={css.button } onClick={bad}>Bad</button>
-</>    )
+            {options.map((option) => (
+                <button className={css.button}
+                    type='button'
+                    key={option}
+                    onClick={() => onLeaveFeedback(option)}>
+                    {option}</button>
+            ))}
+        </>    )
 }
